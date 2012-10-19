@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<!--
+  Google HTML5 slide template
+
+  Authors: Luke Mahé (code)
+           Marcin Wichary (code and design)
+           
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+
+  URL: http://code.google.com/p/html5slides/
+-->
+
+<html>
+  <head>
+    <title>Backspace Birthday</title>
+
+    <meta charset='utf-8'>
+    <script src='slides.js'></script>
+
+  </head>
+  
+  <style>
+    /* Your individual styles here, or just use inline styles if that’s
+       what you want. */
+    
+    #example-intro {
+        background:  url(images/my/example.jpg) 0px 0px no-repeat;
+    }
+      
+    .teaser_bg {
+        background-size: 100%, 100%;  
+        background-color: white;  
+    }
+    
+  </style>
+
+  <body style='display: none'>
+
+    <section class='slides layout-regular template-io2011'>
+      
+      <article class='biglogo'>
+      </article>
+
+      <article>
+        <h1>
+            Backspace Birthday
+        </h1>
+        <p>
+          bobapple, schinken, ptflea
+          <br>
+          October 27, 2012
+        </p>
+      </article>
+
+      <article>
+          <h3>Um was gehts?</h3>
+          <ul class="build">
+              <li>Projekt 1</li>
+              <li>Projekt 2</li>
+              <li>Projekt 3</li>
+              <li>Projekt 4</li>
+          </ul>
+      </article>
+
+      <article id="example-intro" class="fill teaser_bg">
+        <h3>... a sample text!</h3>
+        <h1>sample</h1>
+      </article>
+      
+      <article class="fill">
+          <h3>Demonstration</h3>
+          <iframe src="demov2.html" scrolling="no" style="overflow: hidden" id="demov2"></iframe>
+
+          <script type="text/javascript">
+              var frame1 = document.getElementById('demov2');
+              frame1.onload = function() {
+                frame1.contentWindow.scrollTo(-30, 200 );
+              };
+          </script>
+
+      </article>
+
+    </section>
+  </body>
+</html>
