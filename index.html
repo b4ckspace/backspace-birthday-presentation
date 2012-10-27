@@ -25,15 +25,36 @@
         what you want. */
         
         #fakten-intro,
-        #renovierung-intro,
         #gruendung-intro,
         #fakten-intro {
             background:  url(images/my/example.jpg) 0px 0px no-repeat;
+        }
+        #renovierung-intro{
+            background:  url(images/my/renovierung.jpg) 0px 0px no-repeat;
+        }
+        #renovierung-intro h1 {
+            color: #fff;    
+        }
+        #fakten-intro{
+            background:  url(images/my/stats.jpg) 0px 0px no-repeat;
+        }
+        #projekte-intro{
+            background:  url(images/my/projects.jpg) 0px 0px no-repeat;
         }
         
         .teaser_bg {
             background-size: 100%, 100%;  
             background-color: white;  
+        }
+
+        .images {
+            list-style-image: none;    
+        }
+
+        .images li {
+            display: inline-block;
+            margin: 3px;
+            list-style-type: none;
         }
     
     </style>
@@ -97,16 +118,20 @@
 
         <article>
             <h3>Hinterraum</h3>
-            <li>https://gallery.hackerspace-bamberg.de/var/resizes/Projekte/Renovierung/03.01.2012/Backspace_renovieren_03_01_2012_4.jpg?m=1333841158</li>
-            <li>https://gallery.hackerspace-bamberg.de/var/resizes/Projekte/Renovierung/03.01.2012/Backspace_renovieren_03_01_2012_6.jpg?m=1333841182</li>
-            <li>https://gallery.hackerspace-bamberg.de/var/resizes/Projekte/Renovierung/05.01.2012/Backspace_renovieren_05_01_2012_5.jpg?m=1333841791</li>
+            <br><br><br>
+            <img src="images/projects/renovierung1/renovierung-1.jpg" height="260">
+            <img src="images/projects/renovierung1/renovierung-2.jpg" height="260">
+            <img src="images/projects/renovierung1/renovierung-3.jpg" height="260">
         </article>
 
         <article>
             <h3>Vorderraum</h3>
-            <li>https://gallery.hackerspace-bamberg.de/var/resizes/Projekte/Renovierung/08.06.2012/DSC00180.JPG?m=1339343677</li>
-            <li>https://gallery.hackerspace-bamberg.de/var/resizes/Projekte/Renovierung/07.06.2012/DSC00114.JPG?m=1339343246</li>
-            <li>https://gallery.hackerspace-bamberg.de/var/resizes/Projekte/Renovierung/07.06.2012/DSC00164.JPG?m=1339343281</li>
+            <br>
+            <div style="text-align: center">
+                <img src="images/projects/renovierung2/renovierung-1.jpg" height="220">
+                <img src="images/projects/renovierung2/renovierung-2.jpg" height="220">
+                <img src="images/projects/renovierung2/renovierung-3.jpg" height="240">
+            </div>
         </article>
             
         <article id="fakten-intro" class="fill teaser_bg">
@@ -116,68 +141,8 @@
 
         <article>
             <h3>Mitglieder</h3>
-            <div id="member-chart-div" style="height: 400px"></div>
-            <script type='text/javascript' src='http://www.google.com/jsapi'></script>
-            <script type='text/javascript'>
-
-
-                google.load('visualization', '1', {'packages':['annotatedtimeline']});
-                google.setOnLoadCallback(drawChart);
-
-                function drawChart() {
-                    var data = new google.visualization.DataTable();
-                    data.addColumn('date', 'Date');
-                    data.addColumn('number', 'Members');
-                    data.addRows([
-                        [new Date(2011, 10, 21),1],
-                        [new Date(2011, 10, 21),2],
-                        [new Date(2011, 10, 21),3],
-                        [new Date(2011, 10, 21),4],
-                        [new Date(2011, 10, 21),5],
-                        [new Date(2011, 10, 21),6],
-                        [new Date(2011, 10, 21),7],
-                        [new Date(2011, 10, 21),8],
-                        [new Date(2011, 10, 22),9],
-                        [new Date(2011, 10, 23),10],
-                        [new Date(2011, 10, 27),11],
-                        [new Date(2011, 10, 27),12],
-                        [new Date(2011, 11, 6 ),13],
-                        [new Date(2011, 11, 17 ),14],
-                        [new Date(2011, 11, 20 ),15],
-                        [new Date(2011, 11, 20 ),16],
-                        [new Date(2011, 11, 27 ),17],
-                        [new Date(2012, 0, 1),18],
-                        [new Date(2012, 0, 2),19],
-                        [new Date(2012, 0, 5),20],
-                        [new Date(2012, 0, 9),21],
-                        [new Date(2012, 0, 12),22],
-                        [new Date(2012, 1, 15),21],
-                        [new Date(2012, 1, 21),22],
-                        [new Date(2012, 2, 1),23],
-                        [new Date(2012, 2, 27),24],
-                        [new Date(2012, 3, 16),25],
-                        [new Date(2012, 4, 1),26],
-                        [new Date(2012, 4, 22),27],
-                        [new Date(2012, 5, 20),28],
-                        [new Date(2012, 5, 26),29],
-                        [new Date(2012, 6, 1),28],
-                        [new Date(2012, 6, 27),29],
-                        [new Date(2012, 7, 31),28],
-                        [new Date(2012, 7, 11),29],
-                        [new Date(2012, 8, 18),30],
-                        [new Date(2012, 8, 22),31],
-                        [new Date(2012, 10, 30),30]
-                    ]);
-
-                var chart = new google.visualization.AnnotatedTimeLine(document.getElementById('member-chart-div'));
-                chart.draw(data, {
-                    displayAnnotations: false,
-                    fill: 7,
-                    min: 0
-                });
-
-                }
-            </script>
+            <br>
+            <img src="images/projects/member-graph.png">
         </article>
 
         <article>
@@ -254,16 +219,25 @@
         </article>
 
         <article>
-            <h3>Styroplotter + Aluguss</h3>
+            <h3>Styroplotter</h3>
             <ul class="build">
                 <li>Umbau eines alten Durchlichtscanners</li>
                 <li>Ansteuerung mittels Arduino und Processing</li>
-                <li>http://www.hackerspace-bamberg.de/Datei:Styroplot_Spirale2.jpg</li>
-                <li>http://www.hackerspace-bamberg.de/Datei:Styroplot_plotter.jpg</li>
-                <li>Verwandlung von Styropor zu Aluminium</li>
-                <li>http://www.hackerspace-bamberg.de/Datei:Backspace_aluguss_12_rechts.jpg</li>
-                <li>http://www.hackerspace-bamberg.de/Datei:Backspace_aluguss_14.jpg</li>
             </ul>
+            <div class="build" style="text-align: center; margin-top: 60px;">
+                <img src="images/projects/styro/styroplotter-1.jpg" width="340">
+                <img src="images/projects/styro/styroplotter-2.jpg" width="340">
+            </div>
+        </article>
+        <article>
+            <h3>Aluguss</h3>
+            <ul class="build">
+                <li>Verwandlung von Styropor zu Aluminium</li>
+            </ul>
+            <div class="build" style="text-align: center; margin-top: 60px;">
+                <img src="images/projects/styro/aluguss-1.jpg" width="340">
+                <img src="images/projects/styro/aluguss-2.jpg" width="340">
+            </div>
         </article>
 
         <article>
@@ -271,7 +245,7 @@
             <ul class="build">
                 <li>viele Gäste aus verschiedenen Hackerspaces</li>
                 <li>Vorträge und Workshops
-                    <ul>
+                    <ul class="build" style="margin-top: 20px">
                         <li>ACTA</li>
                         <li>RFID</li>
                         <li>Bedeutung von Hackerspaces</li>
@@ -286,7 +260,8 @@
         <article>
             <h3>LED Board</h3>
             <ul class="build">
-                <li></li>
+                <li>Zentraler Handler (LedLoard)</li>
+                <li>HTTP REST Api für Text und Bilder</li>
             </ul>
         </article>
 
@@ -326,16 +301,11 @@
             <ul class="build">
                 <li>2.5D-Fräse</li>
                 <li>Arbeitsbereich: 600x1000x80mm</li>
-                <li>http://www.hackerspace-bamberg.de/Datei:Backspace_CNC-05.JPG</li>
-                <li>http://www.hackerspace-bamberg.de/Datei:Backspace_CNC-08-Rocket.JPG</li>
             </ul>
-        </article>
-
-        <article>
-            <h3>Quadrocopter</h3>
-            <ul class="build">
-                <li></li>
-            </ul>
+            <div class="build" style="text-align: center; margin-top: 60px;">
+                <img src="images/projects/cnc/cnc-1.jpg" width="340">
+                <img src="images/projects/cnc/cnc-2.jpg" width="340">
+            </div>
         </article>
 
         <article>
